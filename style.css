@@ -1,0 +1,186 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px */
+    background-color: white;
+    color: black;
+}
+
+.logo img {
+    width: 6.25rem; /* 100px */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 3rem; /* 20px */
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem; /* 16px */
+}
+
+.item-btn .login-btn {
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background-color: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icons {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.25rem; /* Align to the right */
+    top: 1.25rem; /* Align to the top */
+}
+
+.main {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+a:hover{
+    border-bottom: 2px red solid;
+    cursor: pointer;
+    
+}
+#check {
+    display: none;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.125rem; /* 50px */
+}
+
+.text-content h1 {
+    font-size: 3rem; /* 48px */
+    line-height: 1.2;
+}
+
+.text-content p.para {
+    font-size: 1.125rem; /* 18px */
+    margin: 1.25rem 0; /* 20px */
+}
+
+.shoe-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shop-now {
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.availability-section {
+    position: relative;
+    margin-top: -20%;
+    padding: 2.5rem; /* 20px */
+}
+
+.availability-section p {
+    font-size: 1.25rem; /* 20px */
+}
+
+.platform-logos img {
+    margin: 0 0.625rem; /* 10px */
+    max-width: 10vw; /* Use viewport width for responsiveness */
+}
+
+footer {
+    color: black;
+    padding: 1.25rem; /* 20px */
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: red;
+        position: absolute;
+        top: 0.3rem; /* 60px */
+        left: 0;
+    }
+
+    .navbar ul li {
+        margin: 1rem 0; /* 15px */
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1.125rem; /* 18px */
+        color: white;
+    }
+
+    .icons {
+        display: block; /* Make sure icons are displayed */
+    }
+    .item-btn{
+        display: none;
+    }
+
+    #check:checked + .icons + .navbar ul {
+        display: flex;
+    }
+
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 3vw; /* Add some padding for responsiveness */
+    }
+
+    .text-content h1 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    .text-content p.para {
+        font-size: 1rem; /* 16px */
+    }
+
+    .shoe-image img {
+        width: 80%; /* Ensure it fits better on mobile */
+        margin-top: 2rem; /* 20px */
+    }
+
+    .shop-now {
+        padding: 0.625rem 1.25rem; /* 10px 20px */
+    }
+}
